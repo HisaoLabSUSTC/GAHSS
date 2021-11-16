@@ -15,7 +15,7 @@ function [Subset,time] = GAHSS(objVal,selNum,r)
             selVal = zeros(selNum,M);
             for num = 1:selNum
                 mintensor = min(mintensor, tensor);
-                r2hvc = sum(mintensor,2);
+                r2hvc = sum(mintensor.^M,2);
                 [~,bestindex] = max(r2hvc);
                 
                 for i=1:solNum
